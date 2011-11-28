@@ -28,7 +28,7 @@ All text between the `~~~` characters is parsed as YAML. Beacon currently requir
 
 ---
 
-Beacon runs on Google App Engine, and should be able to power most, if not all, blogs well within the free quota. 
+Beacon runs on **Google App Engine**, and should be able to power most, if not all, blogs well within the free quota. 
 
 Under the hood, it's using:
 
