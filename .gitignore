@@ -1,0 +1,5 @@
+.installed.cfg
+var/
+bin/
+eggs/
+app/lib/dist/
