@@ -4,3 +4,4 @@ bin/
 eggs/
 app/lib/dist/
 *(Autosaved)
+*.pyc

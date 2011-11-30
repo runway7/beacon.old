@@ -1,12 +1,17 @@
-application: new-project-template
+application: hangar-r7
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
+threadsafe: true
 
 handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: .*
-  script: main.py
+- url: /.*
+  script: main.application
+  
+libraries:
+- name: yaml
+  version: "3.10"
