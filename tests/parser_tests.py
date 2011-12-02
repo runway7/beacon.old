@@ -1,4 +1,4 @@
-import unittest, os
+import unittest, os, datetime
 import parser
 
 class ParserTest(unittest.TestCase):
@@ -20,7 +20,8 @@ class ParserTest(unittest.TestCase):
             title = 'Tracking changes to files',
             publish = True,            
             tags = ['python', 'forklift'],
-            slug = '/tracking-changes-to-files'
+            slug = '/tracking-changes-to-files',
+            date = datetime.date(2011, 11, 27)
         )
         actual_yaml, post_content = parser.split_post(post)
         self.assertEqual(expected_yaml, actual_yaml)
@@ -28,4 +29,5 @@ class ParserTest(unittest.TestCase):
         self.assertIn('And Some other stuff', post_content)
         self.assertNotIn('~~~', post_content)
         
+    
         
