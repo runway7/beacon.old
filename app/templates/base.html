@@ -6,24 +6,34 @@
   <title>{% block title %}{% endblock %} : Hangar, Runway 7</title>
   <meta name="author" content="Sudhir Jonathan">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <div id="container">
     <header>
       <h1>Hangar</h1>
-      <h4>by Runway 7</h4>        
+      <h4 class="byline">Runway 7</h4>        
     </header>
     <div id="main" role="main">
       {% block content %}{% endblock %}
     </div>
     <footer>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
-      &copy; Runway 7
+      <br/>&copy; Runway 7
     </footer>
   </div> 
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Ubuntu:400,700,400italic,700italic:latin','Ubuntu+Mono:400,700,400italic,700italic', 'Play:400,700'] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })(); </script>
 </body>
 </html>

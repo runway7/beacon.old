@@ -456,6 +456,7 @@ body {
 
 /* line 16, ../sass/screen.scss */
 header {
+  position: relative;
   padding: 0.8em 1.61em;
   -moz-border-radius-bottomleft: 0.5em;
   -webkit-border-bottom-left-radius: 0.5em;
@@ -470,39 +471,23 @@ header {
   -khtml-border-bottom-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
-/* line 17, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 header h1, header h2, header h3, header h4, header h5, header h6 {
   display: inline-block;
   font-family: 'Play', sans-serif;
 }
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
+header .byline {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 27, ../sass/screen.scss */
 header p {
   margin-top: 0;
 }
 
-/* line 28, ../sass/screen.scss */
-#main {
-  padding: 1.18em 2.61em;
-  background: white;
-  -moz-border-radius: 0.618em;
-  -webkit-border-radius: 0.618em;
-  -o-border-radius: 0.618em;
-  -ms-border-radius: 0.618em;
-  -khtml-border-radius: 0.618em;
-  border-radius: 0.618em;
-}
-/* line 29, ../sass/screen.scss */
-#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-  line-height: 1.2em;
-}
-
-/* line 37, ../sass/screen.scss */
-.codehilite {
-  width: auto;
-  overflow: visible;
-}
-
-/* line 41, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 pre, code {
   background: rgba(200, 200, 200, 0.3);
   padding: 0.15em 0.3em 0.15em 0.4em;
@@ -515,7 +500,7 @@ pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 pre {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
@@ -523,14 +508,106 @@ pre {
   -ms-border-radius: 0.5em;
   -khtml-border-radius: 0.5em;
   border-radius: 0.5em;
-  padding: 0.5em;
-  overflow-x: auto;
+  padding: 0.618em;
   display: block;
+  overflow-x: auto;
 }
-/* line 54, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 pre > code {
   line-height: 1.5em;
   background: none;
-  width: 50em;
-  display: block;
+  display: inline-block;
+  width: auto;
+  white-space: pre;
+}
+
+/* line 56, ../sass/screen.scss */
+footer {
+  text-align: center;
+  margin: 1.618em;
+}
+
+/* line 61, ../sass/screen.scss */
+.post {
+  padding: 1.18em 2.61em;
+  background: white;
+  -moz-border-radius: 0.618em;
+  -webkit-border-radius: 0.618em;
+  -o-border-radius: 0.618em;
+  -ms-border-radius: 0.618em;
+  -khtml-border-radius: 0.618em;
+  border-radius: 0.618em;
+  position: relative;
+}
+/* line 62, ../sass/screen.scss */
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+  line-height: 1.2em;
+}
+/* line 69, ../sass/screen.scss */
+.post .date, .post .share {
+  position: absolute;
+  padding: 0.618em;
+  text-align: right;
+  color: rgba(200, 200, 200, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+  -moz-border-radius-topright: 0.6em;
+  -webkit-border-top-right-radius: 0.6em;
+  -o-border-top-right-radius: 0.6em;
+  -ms-border-top-right-radius: 0.6em;
+  -khtml-border-top-right-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  -moz-border-radius-bottomright: 0.6em;
+  -webkit-border-bottom-right-radius: 0.6em;
+  -o-border-bottom-right-radius: 0.6em;
+  -ms-border-bottom-right-radius: 0.6em;
+  -khtml-border-bottom-right-radius: 0.6em;
+  border-bottom-right-radius: 0.6em;
+}
+/* line 77, ../sass/screen.scss */
+.post .date {
+  top: 2.618em;
+  right: -7em;
+  width: 7em;
+}
+/* line 82, ../sass/screen.scss */
+.post .share {
+  top: 6.618em;
+  right: -7em;
+  width: 6em;
+  text-align: right;
+  height: 1.618em;
+  overflow: hidden;
+  -moz-transition-property: width, height, right;
+  -webkit-transition-property: width, height, right;
+  -o-transition-property: width, height, right;
+  transition-property: width, height, right;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 91, ../sass/screen.scss */
+.post .share:hover {
+  width: 16.8em;
+  right: -17.8em;
+  height: 3.8em;
+}
+/* line 95, ../sass/screen.scss */
+.post .share:hover .addthis_toolbox {
+  opacity: 1;
+}
+/* line 100, ../sass/screen.scss */
+.post .share .addthis_toolbox {
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  display: inline-block;
+  width: 20em;
+  margin-top: 0.618em;
+  opacity: 0;
 }

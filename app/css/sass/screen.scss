@@ -14,9 +14,15 @@ body{
 }
 
 header{  
+  position: relative;
   h1, h2, h3, h4, h5, h6 {
     display: inline-block;    
     font-family: 'Play', sans-serif;
+  }
+  .byline {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   p {
     margin-top: 0;
@@ -25,19 +31,6 @@ header{
   @include border-bottom-radius(0.5em);
 }
 
-#main {
-  h1,h2,h3,h4,h5,h6{
-    line-height: 1.2em;
-  }
-  padding: 1.18em 2.61em;
-  background: rgba(255,255,255, 1);
-  @include border-radius(0.618em);
-}
-
-.codehilite {
-  width: auto;
-  overflow: visible;
-}
 pre, code {
   background: rgba(200,200,200,0.3);
   padding: 0.15em 0.3em 0.15em 0.4em;
@@ -48,14 +41,69 @@ pre, code {
 
 pre {
   @include border-radius(0.5em);
-  padding: 0.5em;
-  overflow-x: auto;
+  padding: 0.618em;
   display: block;
+  overflow-x: auto;
   & > code{
     line-height: 1.5em;
-    background: none;  
-    width: 50em; 
-    display: block;   
+    background: none;   
+    display: inline-block;
+    width: auto ;   
+    white-space: pre;
   }  
 }
 
+footer {
+  text-align: center;
+  margin: 1.618em;
+}
+
+.post {
+  h1,h2,h3,h4,h5,h6{
+    line-height: 1.2em;
+  }
+  padding: 1.18em 2.61em;
+  background: rgba(255,255,255, 1);
+  @include border-radius(0.618em);  
+  position: relative;
+  .date, .share {
+    position: absolute;
+    padding: 0.618em;
+    text-align: right;
+    color: rgba(200,200,200,0.8);
+    background: rgba(255,255,255, 0.8);
+    @include border-right-radius(0.6em);
+  }
+  .date {
+    top: 2.618em;
+    right: -7em;
+    width: 7em;
+  }
+  .share{
+    top: 6.618em;
+    right: -7em;
+    width: 6em;
+    text-align: right;
+    height: 1.618em;
+    overflow: hidden;
+    @include transition-property('width, height, right');
+    @include transition-duration(0.3s);
+    &:hover{
+      width: 16.8em;
+      right: -17.8em;
+      height: 3.8em;
+      .addthis_toolbox{
+        opacity: 1;
+      }
+      
+    }
+    .addthis_toolbox{
+      @include transition-property('opacity');
+      @include transition-duration(0.3s);
+      display: inline-block;
+      width: 20em;
+      margin-top: 0.618em;
+      opacity: 0;
+    }
+  }
+}
