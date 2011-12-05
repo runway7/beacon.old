@@ -440,21 +440,401 @@ table {
   border-spacing: 0;
 }
 
-/* line 4, ../sass/screen.scss */
+/* line 2, ../sass/pygments-themes/github.scss */
+.codehilite .hll {
+  background-color: #ffffff;
+}
+
+/* line 3, ../sass/pygments-themes/github.scss */
+.codehilite .c {
+  color: #888888;
+  font-style: italic;
+}
+
+/* Comment */
+/* line 4, ../sass/pygments-themes/github.scss */
+.codehilite .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* Error */
+/* line 5, ../sass/pygments-themes/github.scss */
+.codehilite .k {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Keyword */
+/* line 6, ../sass/pygments-themes/github.scss */
+.codehilite .cm {
+  color: #888888;
+}
+
+/* Comment.Multiline */
+/* line 7, ../sass/pygments-themes/github.scss */
+.codehilite .cp {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* Comment.Preproc */
+/* line 8, ../sass/pygments-themes/github.scss */
+.codehilite .c1 {
+  color: #888888;
+}
+
+/* Comment.Single */
+/* line 9, ../sass/pygments-themes/github.scss */
+.codehilite .cs {
+  color: #cc0000;
+  font-weight: bold;
+  background-color: #fff0f0;
+}
+
+/* Comment.Special */
+/* line 10, ../sass/pygments-themes/github.scss */
+.codehilite .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+
+/* Generic.Deleted */
+/* line 11, ../sass/pygments-themes/github.scss */
+.codehilite .ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 12, ../sass/pygments-themes/github.scss */
+.codehilite .gr {
+  color: #aa0000;
+}
+
+/* Generic.Error */
+/* line 13, ../sass/pygments-themes/github.scss */
+.codehilite .gh {
+  color: #303030;
+}
+
+/* Generic.Heading */
+/* line 14, ../sass/pygments-themes/github.scss */
+.codehilite .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+
+/* Generic.Inserted */
+/* line 15, ../sass/pygments-themes/github.scss */
+.codehilite .go {
+  color: #888888;
+}
+
+/* Generic.Output */
+/* line 16, ../sass/pygments-themes/github.scss */
+.codehilite .gp {
+  color: #555555;
+}
+
+/* Generic.Prompt */
+/* line 17, ../sass/pygments-themes/github.scss */
+.codehilite .gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 18, ../sass/pygments-themes/github.scss */
+.codehilite .gu {
+  color: #606060;
+}
+
+/* Generic.Subheading */
+/* line 19, ../sass/pygments-themes/github.scss */
+.codehilite .gt {
+  color: #aa0000;
+}
+
+/* Generic.Traceback */
+/* line 20, ../sass/pygments-themes/github.scss */
+.codehilite .kc {
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* line 21, ../sass/pygments-themes/github.scss */
+.codehilite .kd {
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+/* line 22, ../sass/pygments-themes/github.scss */
+.codehilite .kn {
+  font-weight: bold;
+}
+
+/* Keyword.Namespace */
+/* line 23, ../sass/pygments-themes/github.scss */
+.codehilite .kp {
+  font-weight: bold;
+}
+
+/* Keyword.Pseudo */
+/* line 24, ../sass/pygments-themes/github.scss */
+.codehilite .kr {
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+/* line 25, ../sass/pygments-themes/github.scss */
+.codehilite .kt {
+  color: #458;
+  font-weight: bold;
+}
+
+/* Keyword.Type */
+/* line 26, ../sass/pygments-themes/github.scss */
+.codehilite .m {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* Literal.Number */
+/* line 27, ../sass/pygments-themes/github.scss */
+.codehilite .s {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+
+/* Literal.String */
+/* line 28, ../sass/pygments-themes/github.scss */
+.codehilite .na {
+  color: #008080;
+}
+
+/* Name.Attribute */
+/* line 29, ../sass/pygments-themes/github.scss */
+.codehilite .nb {
+  color: #0086B3;
+}
+
+/* Name.Builtin */
+/* line 30, ../sass/pygments-themes/github.scss */
+.codehilite .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+/* Name.Class */
+/* line 31, ../sass/pygments-themes/github.scss */
+.codehilite .no {
+  color: #008080;
+}
+
+/* Name.Constant */
+/* line 32, ../sass/pygments-themes/github.scss */
+.codehilite .ni {
+  color: #800080;
+}
+
+/* line 33, ../sass/pygments-themes/github.scss */
+.codehilite .ne {
+  color: #900;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+/* line 34, ../sass/pygments-themes/github.scss */
+.codehilite .nf {
+  color: #900;
+  font-weight: bold;
+}
+
+/* Name.Function */
+/* line 35, ../sass/pygments-themes/github.scss */
+.codehilite .nn {
+  color: #005;
+  font-weight: bold;
+}
+
+/* Name.Namespace */
+/* line 36, ../sass/pygments-themes/github.scss */
+.codehilite .nt {
+  color: #000080;
+}
+
+/* Name.Tag */
+/* line 37, ../sass/pygments-themes/github.scss */
+.codehilite .nv {
+  color: #008080;
+}
+
+/* Name.Variable */
+/* line 38, ../sass/pygments-themes/github.scss */
+.codehilite .py {
+  color: #336699;
+  font-weight: bold;
+}
+
+/* Name.Property */
+/* line 39, ../sass/pygments-themes/github.scss */
+.codehilite .ow {
+  color: #008800;
+}
+
+/* Operator.Word */
+/* line 40, ../sass/pygments-themes/github.scss */
+.codehilite .w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+/* line 41, ../sass/pygments-themes/github.scss */
+.codehilite .mf {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* Literal.Number.Float */
+/* line 42, ../sass/pygments-themes/github.scss */
+.codehilite .mh {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* Literal.Number.Hex */
+/* line 43, ../sass/pygments-themes/github.scss */
+.codehilite .highlight .mi {
+  color: #099;
+}
+
+/* Literal.Number.Integer */
+/* line 44, ../sass/pygments-themes/github.scss */
+.codehilite .mo {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* Literal.Number.Oct */
+/* line 45, ../sass/pygments-themes/github.scss */
+.codehilite .sb {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+
+/* Literal.String.Backtick */
+/* line 46, ../sass/pygments-themes/github.scss */
+.codehilite .highlight .sc {
+  color: #d14;
+}
+
+/* Literal.String.Char */
+/* line 47, ../sass/pygments-themes/github.scss */
+.codehilite .sd {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+
+/* Literal.String.Doc */
+/* line 48, ../sass/pygments-themes/github.scss */
+.codehilite .s2 {
+  color: #d14;
+}
+
+/* Literal.String.Double */
+/* line 49, ../sass/pygments-themes/github.scss */
+.codehilite .se {
+  color: #d14;
+}
+
+/* Literal.String.Escape */
+/* line 50, ../sass/pygments-themes/github.scss */
+.codehilite .sh {
+  color: #d14;
+}
+
+/* Literal.String.Heredoc */
+/* line 51, ../sass/pygments-themes/github.scss */
+.codehilite .si {
+  color: #d14;
+}
+
+/* Literal.String.Interpol */
+/* line 52, ../sass/pygments-themes/github.scss */
+.codehilite .sx {
+  color: #d14;
+}
+
+/* Literal.String.Other */
+/* line 53, ../sass/pygments-themes/github.scss */
+.codehilite .sr {
+  color: #d14;
+}
+
+/* Literal.String.Regex */
+/* line 54, ../sass/pygments-themes/github.scss */
+.codehilite .s1 {
+  color: #d14;
+}
+
+/* Literal.String.Single */
+/* line 55, ../sass/pygments-themes/github.scss */
+.codehilite .ss {
+  color: #d14;
+}
+
+/* Literal.String.Symbol */
+/* line 56, ../sass/pygments-themes/github.scss */
+.codehilite .bp {
+  color: #003388;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 57, ../sass/pygments-themes/github.scss */
+.codehilite .vc {
+  color: #336699;
+}
+
+/* Name.Variable.Class */
+/* line 58, ../sass/pygments-themes/github.scss */
+.codehilite .vg {
+  color: #dd7700;
+}
+
+/* Name.Variable.Global */
+/* line 59, ../sass/pygments-themes/github.scss */
+.codehilite .vi {
+  color: #3333bb;
+}
+
+/* Name.Variable.Instance */
+/* line 60, ../sass/pygments-themes/github.scss */
+.codehilite .il {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* Literal.Number.Integer.Long */
+/* line 5, ../sass/screen.scss */
 body {
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.618em;
+  color: #666;
   background: url(/stylesheets/images/light_alu.png);
 }
 
-/* line 11, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+/* line 17, ../sass/screen.scss */
 #container {
   margin: auto;
   width: 36em;
 }
 
-/* line 16, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 header {
   position: relative;
   padding: 0.8em 1.61em;
@@ -471,25 +851,25 @@ header {
   -khtml-border-bottom-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
-/* line 18, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 header h1, header h2, header h3, header h4, header h5, header h6 {
   display: inline-block;
   font-family: 'Play', sans-serif;
 }
-/* line 22, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 header .byline {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 1.618em;
 }
-/* line 27, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 header p {
   margin-top: 0;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 pre, code {
-  background: rgba(200, 200, 200, 0.3);
+  background: rgba(230, 230, 230, 0.6);
   padding: 0.15em 0.3em 0.15em 0.4em;
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
@@ -500,7 +880,7 @@ pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 pre {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
@@ -512,7 +892,7 @@ pre {
   display: block;
   overflow-x: auto;
 }
-/* line 47, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 pre > code {
   line-height: 1.5em;
   background: none;
@@ -521,15 +901,15 @@ pre > code {
   white-space: pre;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 footer {
   text-align: center;
-  margin: 1.618em;
+  margin: 2.618em;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .post {
-  padding: 1.18em 2.61em;
+  padding: 0.8em 2.61em;
   background: white;
   -moz-border-radius: 0.618em;
   -webkit-border-radius: 0.618em;
@@ -539,17 +919,17 @@ footer {
   border-radius: 0.618em;
   position: relative;
 }
-/* line 62, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
-/* line 69, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 .post .date, .post .share {
   position: absolute;
   padding: 0.618em;
   text-align: right;
-  color: rgba(200, 200, 200, 0.8);
-  background: rgba(255, 255, 255, 0.8);
+  color: rgba(100, 100, 100, 0.61);
+  background: rgba(255, 255, 255, 0.61);
   -moz-border-radius-topright: 0.6em;
   -webkit-border-top-right-radius: 0.6em;
   -o-border-top-right-radius: 0.6em;
@@ -563,13 +943,13 @@ footer {
   -khtml-border-bottom-right-radius: 0.6em;
   border-bottom-right-radius: 0.6em;
 }
-/* line 77, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .post .date {
   top: 2.618em;
   right: -7em;
   width: 7em;
 }
-/* line 82, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .post .share {
   top: 6.618em;
   right: -7em;
@@ -577,26 +957,27 @@ footer {
   text-align: right;
   height: 1.618em;
   overflow: hidden;
-  -moz-transition-property: width, height, right;
-  -webkit-transition-property: width, height, right;
-  -o-transition-property: width, height, right;
-  transition-property: width, height, right;
+  -moz-transition-property: width, height, right,  background;
+  -webkit-transition-property: width, height, right,  background;
+  -o-transition-property: width, height, right,  background;
+  transition-property: width, height, right,  background;
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 91, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .post .share:hover {
   width: 16.8em;
   right: -17.8em;
   height: 3.8em;
+  background: white;
 }
-/* line 95, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .post .share:hover .addthis_toolbox {
   opacity: 1;
 }
-/* line 100, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .post .share .addthis_toolbox {
   -moz-transition-property: opacity;
   -webkit-transition-property: opacity;

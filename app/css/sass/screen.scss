@@ -1,11 +1,17 @@
 @import "normalize";
 @import "compass/css3";
+@import "pygments-themes/github";
 
 body{
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.618em;
+  color: #666;
   background: url(/stylesheets/images/light_alu.png);
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #333;
 }
 
 #container{
@@ -22,7 +28,7 @@ header{
   .byline {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1.618em;
   }
   p {
     margin-top: 0;
@@ -32,7 +38,7 @@ header{
 }
 
 pre, code {
-  background: rgba(200,200,200,0.3);
+  background: rgba(230,230,230,0.6);
   padding: 0.15em 0.3em 0.15em 0.4em;
   @include border-radius(0.3em);
   font-family: 'Ubuntu Mono', monospace;
@@ -55,14 +61,14 @@ pre {
 
 footer {
   text-align: center;
-  margin: 1.618em;
+  margin: 2.618em;
 }
 
 .post {
   h1,h2,h3,h4,h5,h6{
-    line-height: 1.2em;
+    line-height: 1.4em;
   }
-  padding: 1.18em 2.61em;
+  padding: 0.8em 2.61em;
   background: rgba(255,255,255, 1);
   @include border-radius(0.618em);  
   position: relative;
@@ -70,8 +76,8 @@ footer {
     position: absolute;
     padding: 0.618em;
     text-align: right;
-    color: rgba(200,200,200,0.8);
-    background: rgba(255,255,255, 0.8);
+    color: rgba(100,100,100,0.61);
+    background: rgba(255,255,255, 0.61);
     @include border-right-radius(0.6em);
   }
   .date {
@@ -86,12 +92,13 @@ footer {
     text-align: right;
     height: 1.618em;
     overflow: hidden;
-    @include transition-property('width, height, right');
+    @include transition-property('width, height, right,  background');
     @include transition-duration(0.3s);
     &:hover{
       width: 16.8em;
       right: -17.8em;
       height: 3.8em;
+      background: rgba(255,255,255, 1);
       .addthis_toolbox{
         opacity: 1;
       }
