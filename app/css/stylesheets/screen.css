@@ -819,8 +819,8 @@ body {
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.618em;
-  color: #666;
-  background: url(/stylesheets/images/light_alu.png);
+  color: #444;
+  background: url(/stylesheets/images/bright_squares.png) fixed;
 }
 
 /* line 13, ../sass/screen.scss */
@@ -829,12 +829,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 17, ../sass/screen.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* line 20, ../sass/screen.scss */
+a:visited, a:active, a:hover {
+  color: inherit;
+}
+
+/* line 25, ../sass/screen.scss */
 #container {
   margin: auto;
   width: 36em;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 header {
   position: relative;
   padding: 0.8em 1.61em;
@@ -851,25 +861,33 @@ header {
   -khtml-border-bottom-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
-/* line 24, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 header h1, header h2, header h3, header h4, header h5, header h6 {
   display: inline-block;
   font-family: 'Play', sans-serif;
 }
-/* line 28, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
+header h1 {
+  text-transform: uppercase;
+}
+/* line 39, ../sass/screen.scss */
 header .byline {
   position: absolute;
   top: 0;
   right: 1.618em;
 }
-/* line 33, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 header p {
   margin-top: 0;
 }
+/* line 49, ../sass/screen.scss */
+header a {
+  border-bottom: none;
+}
 
-/* line 40, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 pre, code {
-  background: rgba(230, 230, 230, 0.6);
+  background: rgba(230, 230, 230, 0.381);
   padding: 0.15em 0.3em 0.15em 0.4em;
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
@@ -880,7 +898,7 @@ pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 pre {
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
@@ -892,7 +910,7 @@ pre {
   display: block;
   overflow-x: auto;
 }
-/* line 53, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 pre > code {
   line-height: 1.5em;
   background: none;
@@ -901,16 +919,155 @@ pre > code {
   white-space: pre;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 footer {
   text-align: center;
   margin: 2.618em;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
+.post a, .intro a {
+  text-decoration: none;
+  color: #333;
+  border-bottom: thin dashed #999;
+}
+/* line 86, ../sass/screen.scss */
+.post a:visited, .intro a:visited {
+  color: #333;
+}
+
+/* line 92, ../sass/screen.scss */
+.post-list, .intro {
+  margin-bottom: 1.618em;
+}
+
+/* line 96, ../sass/screen.scss */
+.post-list {
+  padding: 0;
+}
+/* line 98, ../sass/screen.scss */
+.post-list .post-li {
+  cursor: pointer;
+  -moz-transition-property: background;
+  -webkit-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  background: rgba(255, 255, 255, 0.618);
+  display: block;
+  padding: 1.618em;
+  line-height: 2em;
+  position: relative;
+  border-bottom: thin dashed #333;
+}
+/* line 107, ../sass/screen.scss */
+.post-list .post-li .title {
+  margin: 0;
+}
+/* line 110, ../sass/screen.scss */
+.post-list .post-li .arrow {
+  position: absolute;
+  top: 0.075em;
+  left: -0.5em;
+  font-size: 10em;
+  -moz-transform: translateX(-2em);
+  -webkit-transform: translateX(-2em);
+  -o-transform: translateX(-2em);
+  -ms-transform: translateX(-2em);
+  transform: translateX(-2em);
+  -moz-transform: rotate(180);
+  -webkit-transform: rotate(180);
+  -o-transform: rotate(180);
+  -ms-transform: rotate(180);
+  transform: rotate(180);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  color: rgba(100, 100, 100, 0.5);
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 124, ../sass/screen.scss */
+.post-list .post-li:first-child {
+  -moz-border-radius-topleft: 0.618em;
+  -webkit-border-top-left-radius: 0.618em;
+  -o-border-top-left-radius: 0.618em;
+  -ms-border-top-left-radius: 0.618em;
+  -khtml-border-top-left-radius: 0.618em;
+  border-top-left-radius: 0.618em;
+  -moz-border-radius-topright: 0.618em;
+  -webkit-border-top-right-radius: 0.618em;
+  -o-border-top-right-radius: 0.618em;
+  -ms-border-top-right-radius: 0.618em;
+  -khtml-border-top-right-radius: 0.618em;
+  border-top-right-radius: 0.618em;
+}
+/* line 127, ../sass/screen.scss */
+.post-list .post-li:last-child {
+  -moz-border-radius-bottomleft: 0.618em;
+  -webkit-border-bottom-left-radius: 0.618em;
+  -o-border-bottom-left-radius: 0.618em;
+  -ms-border-bottom-left-radius: 0.618em;
+  -khtml-border-bottom-left-radius: 0.618em;
+  border-bottom-left-radius: 0.618em;
+  -moz-border-radius-bottomright: 0.618em;
+  -webkit-border-bottom-right-radius: 0.618em;
+  -o-border-bottom-right-radius: 0.618em;
+  -ms-border-bottom-right-radius: 0.618em;
+  -khtml-border-bottom-right-radius: 0.618em;
+  border-bottom-right-radius: 0.618em;
+  border-bottom: none;
+}
+/* line 131, ../sass/screen.scss */
+.post-list .post-li:hover {
+  background: rgba(255, 255, 255, 0.818);
+}
+/* line 132, ../sass/screen.scss */
+.post-list .post-li:hover .arrow {
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -moz-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -o-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 142, ../sass/screen.scss */
+.intro {
+  -moz-border-radius: 0.618em;
+  -webkit-border-radius: 0.618em;
+  -o-border-radius: 0.618em;
+  -ms-border-radius: 0.618em;
+  -khtml-border-radius: 0.618em;
+  border-radius: 0.618em;
+  padding: 1.61em;
+  background: rgba(255, 255, 255, 0.618);
+  text-align: center;
+  padding: 0.61em 1.61em;
+}
+
+/* line 150, ../sass/screen.scss */
 .post {
   padding: 0.8em 2.61em;
-  background: white;
+  background: rgba(255, 255, 255, 0.618);
   -moz-border-radius: 0.618em;
   -webkit-border-radius: 0.618em;
   -o-border-radius: 0.618em;
@@ -919,16 +1076,16 @@ footer {
   border-radius: 0.618em;
   position: relative;
 }
-/* line 68, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   line-height: 1.4em;
 }
-/* line 75, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .post .date, .post .share {
   position: absolute;
   padding: 0.618em;
   text-align: right;
-  color: rgba(100, 100, 100, 0.61);
+  color: #999;
   background: rgba(255, 255, 255, 0.61);
   -moz-border-radius-topright: 0.6em;
   -webkit-border-top-right-radius: 0.6em;
@@ -942,20 +1099,22 @@ footer {
   -ms-border-bottom-right-radius: 0.6em;
   -khtml-border-bottom-right-radius: 0.6em;
   border-bottom-right-radius: 0.6em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  right: -7.618em;
+  width: 7.618em;
 }
-/* line 83, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .post .date {
   top: 2.618em;
-  right: -7em;
-  width: 7em;
 }
-/* line 88, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .post .share {
   top: 6.618em;
-  right: -7em;
-  width: 6em;
   text-align: right;
-  height: 1.618em;
+  height: 2.618em;
   overflow: hidden;
   -moz-transition-property: width, height, right,  background;
   -webkit-transition-property: width, height, right,  background;
@@ -966,18 +1125,17 @@ footer {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 97, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .post .share:hover {
-  width: 16.8em;
-  right: -17.8em;
-  height: 3.8em;
-  background: white;
+  width: 18em;
+  right: -18em;
+  height: 4.618em;
 }
-/* line 102, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .post .share:hover .addthis_toolbox {
   opacity: 1;
 }
-/* line 107, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .post .share .addthis_toolbox {
   -moz-transition-property: opacity;
   -webkit-transition-property: opacity;
@@ -991,4 +1149,8 @@ footer {
   width: 20em;
   margin-top: 0.618em;
   opacity: 0;
+}
+/* line 195, ../sass/screen.scss */
+.post .share .addthis_toolbox a {
+  border-bottom: none;
 }

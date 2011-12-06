@@ -42,8 +42,11 @@ def serve_post(request):
         webapp.abort(404)
     return render('post.html', dict(post = post))
     
+def index(request):
+    return render('index.html', dict(posts = Post.query().fetch()))
 
 application = webapp.WSGIApplication([
     webapp.SimpleRoute('/_refresh/', handler = refresh),
+    webapp.SimpleRoute('/', handler = index),
     webapp.SimpleRoute('/.*', handler = serve_post)
 ], debug=True)

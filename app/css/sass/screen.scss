@@ -6,12 +6,20 @@ body{
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.618em;
-  color: #666;
-  background: url(/stylesheets/images/light_alu.png);
+  color: #444;
+  background: url(/stylesheets/images/bright_squares.png) fixed;
 }
 
 h1, h2, h3, h4, h5, h6{
   color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited, &:active, &:hover{
+    color: inherit;    
+  }
 }
 
 #container{
@@ -25,6 +33,9 @@ header{
     display: inline-block;    
     font-family: 'Play', sans-serif;
   }
+  h1 {
+    text-transform: uppercase;
+  }
   .byline {
     position: absolute;
     top: 0;
@@ -35,10 +46,13 @@ header{
   }
   padding: 0.8em 1.61em;
   @include border-bottom-radius(0.5em);
+  a {
+    border-bottom: none;
+  }
 }
 
 pre, code {
-  background: rgba(230,230,230,0.6);
+  background: rgba(230,230,230,0.381);
   padding: 0.15em 0.3em 0.15em 0.4em;
   @include border-radius(0.3em);
   font-family: 'Ubuntu Mono', monospace;
@@ -64,41 +78,108 @@ footer {
   margin: 2.618em;
 }
 
+.post, .intro {
+  a {
+    text-decoration: none;
+    color: #333;
+    border-bottom: thin dashed #999;
+    &:visited{
+      color: #333;
+    }
+  }
+}
+
+.post-list, .intro{
+  margin-bottom: 1.618em;
+}
+
+.post-list{
+  padding: 0;
+  .post-li{
+    cursor: pointer;
+    @include transition-property('background');
+    @include transition-duration(0.3s);
+    background: rgba(255,255,255, 0.618);
+    display: block;
+    padding: 1.618em;
+    line-height: 2em;
+    position: relative;
+    .title {
+      margin: 0;
+    }
+    .arrow {
+      position: absolute;
+      top: 0.075em;
+      left: -0.5em;
+      font-size: 10em;
+      @include translateX(-2em);
+      @include rotate(180);
+      @include opacity(0);
+      color: rgba(100,100,100,0.5);
+      @include transition-property(all);
+      @include transition-duration(0.3s);
+      @include transition-timing-function(ease-in-out);
+    }
+    border-bottom: thin dashed #333; 
+    &:first-child{
+      @include border-top-radius(0.618em);  
+    }
+    &:last-child {
+      @include border-bottom-radius(0.618em);  
+      border-bottom: none;
+    }
+    &:hover {
+      .arrow {
+        @include translateX(0);
+        @include rotate(0);
+        @include opacity(1);
+      }
+      background: rgba(255,255,255, 0.818);
+    }
+  }
+}
+
+.intro {
+  @include border-radius(0.618em);  
+  padding: 1.61em;
+  background: rgba(255,255,255, 0.618);
+  text-align: center;
+  padding: 0.61em 1.61em;
+}
+
 .post {
   h1,h2,h3,h4,h5,h6{
     line-height: 1.4em;
   }
   padding: 0.8em 2.61em;
-  background: rgba(255,255,255, 1);
+  background: rgba(255,255,255, 0.618);
   @include border-radius(0.618em);  
   position: relative;
   .date, .share {
     position: absolute;
     padding: 0.618em;
     text-align: right;
-    color: rgba(100,100,100,0.61);
+    color: #999;
     background: rgba(255,255,255, 0.61);
     @include border-right-radius(0.6em);
+    @include box-sizing(border-box);
+    right: -7.618em;
+    width: 7.618em;    
   }
   .date {
     top: 2.618em;
-    right: -7em;
-    width: 7em;
   }
   .share{
     top: 6.618em;
-    right: -7em;
-    width: 6em;
     text-align: right;
-    height: 1.618em;
+    height: 2.618em;
     overflow: hidden;
     @include transition-property('width, height, right,  background');
     @include transition-duration(0.3s);
     &:hover{
-      width: 16.8em;
-      right: -17.8em;
-      height: 3.8em;
-      background: rgba(255,255,255, 1);
+      width: 18em;
+      right: -18em;
+      height: 4.618em;
       .addthis_toolbox{
         opacity: 1;
       }
@@ -111,6 +192,9 @@ footer {
       width: 20em;
       margin-top: 0.618em;
       opacity: 0;
+      a{
+        border-bottom: none;
+      }
     }
   }
 }

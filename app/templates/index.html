@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Hangar: The Runway 7 Blog{% endblock %}
+{% block content %}
+<section class="intro">
+  <p>Hangar is the technical blog from <a href="http://www.runway7.net">Runway 7</a>, which is Sudhir Jonathan's coding and design lab. It's a collection of insights, guides and how-to's for Python, <a href="http://code.google.com/appengine">Google App Engine</a>, <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> / JavaScript, SASS and high-performance web development.</p>
+  <p>Almost all of the code referred to here is open sourced on <a href="http://www.github.com/runway7">github.com/runway7</a></p>
+</section>
+<section class='post-list'>
+  {% for post in posts %}
+    <a class="post-li" href="{{post.key.id()}}">
+      <h3 class="title">{{ post.title }}</h3>
+      <div class='date'>{{post.date.strftime('%b %d, %Y')}}</div>
+      <div class="arrow">&gt;</div>
+    </a>
+  {% endfor %}  
+</section>
+{% endblock %}
