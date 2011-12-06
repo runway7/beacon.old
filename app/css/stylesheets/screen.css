@@ -973,11 +973,11 @@ footer {
   top: 0.075em;
   left: -0.5em;
   font-size: 10em;
-  -moz-transform: translateX(-2em);
-  -webkit-transform: translateX(-2em);
-  -o-transform: translateX(-2em);
-  -ms-transform: translateX(-2em);
-  transform: translateX(-2em);
+  -moz-transform: translateX(-1em);
+  -webkit-transform: translateX(-1em);
+  -o-transform: translateX(-1em);
+  -ms-transform: translateX(-1em);
+  transform: translateX(-1em);
   -moz-transform: rotate(180);
   -webkit-transform: rotate(180);
   -o-transform: rotate(180);

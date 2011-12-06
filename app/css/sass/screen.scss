@@ -112,7 +112,7 @@ footer {
       top: 0.075em;
       left: -0.5em;
       font-size: 10em;
-      @include translateX(-2em);
+      @include translateX(-1em);
       @include rotate(180);
       @include opacity(0);
       color: rgba(100,100,100,0.5);
