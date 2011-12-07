@@ -4,6 +4,8 @@ class Config(model.Model):
     value = model.StringProperty(indexed = False)
 
 class Post(model.Model):
+    _use_memcache = False
+    
     date = model.DateProperty()
     title = model.StringProperty(indexed = False)
     content = model.TextProperty(indexed = False)
