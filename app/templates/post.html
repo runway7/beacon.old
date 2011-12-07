@@ -18,5 +18,12 @@
     <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4edbb4881a143c39"></script>
     <!-- AddThis Button END -->
   </div>
+  {% if post.tags %}
+    <div class="tags">
+      {% for tag in post.tags %}
+        <a class="tag" href="#">{{ tag }}</a>
+      {% endfor %}
+    </div>    
+  {% endif %}
 </section>
 {% endblock %}

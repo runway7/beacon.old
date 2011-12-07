@@ -155,7 +155,7 @@ footer {
   background: rgba(255,255,255, 0.618);
   @include border-radius(0.618em);  
   position: relative;
-  .date, .share {
+  .date, .share, .tags {
     position: absolute;
     padding: 0.618em;
     text-align: right;
@@ -168,6 +168,19 @@ footer {
   }
   .date {
     top: 2.618em;
+  }
+  .tags{
+    @include border-right-radius(0);
+    @include border-left-radius(0.6em);
+    top: 2.618em;
+    right: auto;
+    left: -7.618em;
+    .tag{
+      text-transform: uppercase;
+      font-size: 0.8em;
+      display: block;
+      border-bottom: none;
+    }
   }
   .share{
     top: 6.618em;
