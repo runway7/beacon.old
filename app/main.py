@@ -1,10 +1,23 @@
+import os, sys
+
+current_path = os.path.abspath(os.path.dirname(__file__))
+
+sys.path[0:0] = [
+    current_path,
+    os.path.join(current_path, 'lib'),
+    os.path.join(current_path, 'lib', 'dist'),
+    os.path.join(current_path, 'lib', 'dist.zip'),
+]
+
 from google.appengine.ext import webapp
 from google.appengine.api import urlfetch
 
 import logging, StringIO, functools, os
-import zipfile, parser, jinja2
+import zipfile, md_parser, jinja2
 
 from models import Post
+
+
 
 repo = 'runway7/hangar'
 
@@ -23,10 +36,10 @@ zip_stream = lambda s: zipfile.ZipFile(StringIO.StringIO(s), 'r')
 fetch_as_zip = lambda url: zip_stream(urlfetch.fetch(url).content)
 
 def _extract_posts(zip_file):
-    md_files = parser.filter_markdown_files(zip_file.namelist())
+    md_files = md_parser.filter_markdown_files(zip_file.namelist())
     for md_file in md_files:
         with zip_file.open(md_file) as post:
-            metadata, content = parser.parse(post)
+            metadata, content = md_parser.parse(post)
             if metadata['publish']: yield Post.create(metadata, content) 
     
 
