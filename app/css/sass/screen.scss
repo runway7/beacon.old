@@ -106,21 +106,33 @@ footer {
     position: relative;
     .title {
       margin: 0;
+      color: #900;
     }
     .arrow {
       position: absolute;
-      top: 0.075em;
-      left: -0.5em;
+      top: 0.081em;
+      left: -0.4em;
       font-size: 10em;
       @include translateX(-1em);
       @include rotate(180);
       @include opacity(0);
-      color: rgba(100,100,100,0.5);
+      color: rgba(100,100,100,0.3);
       @include transition-property(all);
       @include transition-duration(0.3s);
       @include transition-timing-function(ease-in-out);
     }
-    border-bottom: thin dashed #333; 
+    .tags {
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0.618em;
+      right: 1.618em;
+      .tag {
+        font-size: 0.8em;
+        color: #038;
+        margin-left: 0.618em;
+      }
+    }
+    border-bottom: thin solid #ccc; 
     &:first-child{
       @include border-top-radius(0.618em);  
     }
@@ -162,9 +174,10 @@ footer {
     color: #999;
     background: rgba(255,255,255, 0.61);
     @include border-right-radius(0.6em);
-    @include box-sizing(border-box);
     right: -7.618em;
     width: 7.618em;    
+    @include box-sizing(border-box);
+    -moz-box-sizing: border-box;
   }
   .date {
     top: 2.618em;

@@ -955,17 +955,18 @@ footer {
   padding: 1.618em;
   line-height: 2em;
   position: relative;
-  border-bottom: thin dashed #333;
+  border-bottom: thin solid #ccc;
 }
 /* line 107, ../sass/screen.scss */
 .post-list .post-li .title {
   margin: 0;
+  color: #900;
 }
-/* line 110, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .post-list .post-li .arrow {
   position: absolute;
-  top: 0.075em;
-  left: -0.5em;
+  top: 0.081em;
+  left: -0.4em;
   font-size: 10em;
   -webkit-transform: translateX(-1em);
   -moz-transform: translateX(-1em);
@@ -977,7 +978,7 @@ footer {
   transform: rotate(180);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  color: rgba(100, 100, 100, 0.5);
+  color: rgba(100, 100, 100, 0.3);
   -webkit-transition-property: all;
   -moz-transition-property: all;
   transition-property: all;
@@ -989,6 +990,19 @@ footer {
   transition-timing-function: ease-in-out;
 }
 /* line 124, ../sass/screen.scss */
+.post-list .post-li .tags {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0.618em;
+  right: 1.618em;
+}
+/* line 129, ../sass/screen.scss */
+.post-list .post-li .tags .tag {
+  font-size: 0.8em;
+  color: #038;
+  margin-left: 0.618em;
+}
+/* line 136, ../sass/screen.scss */
 .post-list .post-li:first-child {
   -webkit-border-radius-topleft: 0.618em;
   -moz-border-top-left-radius: 0.618em;
@@ -1001,7 +1015,7 @@ footer {
   -o-border-top-right-radius: 0.618em;
   border-top-right-radius: 0.618em;
 }
-/* line 127, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .post-list .post-li:last-child {
   -webkit-border-radius-bottomleft: 0.618em;
   -moz-border-bottom-left-radius: 0.618em;
@@ -1015,11 +1029,11 @@ footer {
   border-bottom-right-radius: 0.618em;
   border-bottom: none;
 }
-/* line 131, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .post-list .post-li:hover {
   background: rgba(255, 255, 255, 0.818);
 }
-/* line 132, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .post-list .post-li:hover .arrow {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -1033,7 +1047,7 @@ footer {
   opacity: 1;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .intro {
   -webkit-border-radius: 0.618em;
   -moz-border-radius: 0.618em;
@@ -1046,7 +1060,7 @@ footer {
   padding: 0.61em 1.61em;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .post {
   padding: 0.8em 2.61em;
   background: rgba(255, 255, 255, 0.618);
@@ -1057,11 +1071,11 @@ footer {
   border-radius: 0.618em;
   position: relative;
 }
-/* line 151, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   line-height: 1.4em;
 }
-/* line 158, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .post .date, .post .share, .post .tags {
   position: absolute;
   padding: 0.618em;
@@ -1078,17 +1092,18 @@ footer {
   -ms-border-bottom-right-radius: 0.6em;
   -o-border-bottom-right-radius: 0.6em;
   border-bottom-right-radius: 0.6em;
+  right: -7.618em;
+  width: 7.618em;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  right: -7.618em;
-  width: 7.618em;
+  -moz-box-sizing: border-box;
 }
-/* line 169, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .post .date {
   top: 2.618em;
 }
-/* line 172, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .post .tags {
   -webkit-border-radius-topright: 0;
   -moz-border-top-right-radius: 0;
@@ -1114,14 +1129,14 @@ footer {
   right: auto;
   left: -7.618em;
 }
-/* line 178, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .post .tags .tag {
   text-transform: uppercase;
   font-size: 0.8em;
   display: block;
   border-bottom: none;
 }
-/* line 185, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .post .share {
   top: 6.618em;
   text-align: right;
@@ -1134,17 +1149,17 @@ footer {
   -moz-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 192, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .post .share:hover {
   width: 18em;
   right: -18em;
   height: 4.618em;
 }
-/* line 196, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .post .share:hover .addthis_toolbox {
   opacity: 1;
 }
-/* line 201, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .post .share .addthis_toolbox {
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
@@ -1157,7 +1172,7 @@ footer {
   margin-top: 0.618em;
   opacity: 0;
 }
-/* line 208, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .post .share .addthis_toolbox a {
   border-bottom: none;
 }
