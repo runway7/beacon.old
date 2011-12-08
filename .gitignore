@@ -6,3 +6,4 @@ app/lib/dist/
 *(Autosaved)
 *.pyc
 app/css/.sass-cache/
+.DS_Store
