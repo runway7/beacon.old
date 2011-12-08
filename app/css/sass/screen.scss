@@ -195,32 +195,4 @@ footer {
       border-bottom: none;
     }
   }
-  .share{
-    top: 6.618em;
-    text-align: right;
-    height: 2.618em;
-    overflow: hidden;
-    @include transition-property('width, height, right,  background');
-    @include transition-duration(0.3s);
-    &:hover{
-      width: 18em;
-      right: -18em;
-      height: 4.618em;
-      .addthis_toolbox{
-        opacity: 1;
-      }
-      
-    }
-    .addthis_toolbox{
-      @include transition-property('opacity');
-      @include transition-duration(0.3s);
-      display: inline-block;
-      width: 20em;
-      margin-top: 0.618em;
-      opacity: 0;
-      a{
-        border-bottom: none;
-      }
-    }
-  }
 }
