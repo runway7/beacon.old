@@ -1070,8 +1070,13 @@ footer {
 /* line 162, ../sass/screen.scss */
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   line-height: 1.4em;
+  color: #900;
 }
-/* line 169, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
+.post a {
+  color: #038;
+}
+/* line 173, ../sass/screen.scss */
 .post .date, .post .tags {
   position: absolute;
   padding: 0.618em;
@@ -1095,15 +1100,15 @@ footer {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-/* line 181, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .post .date {
   top: 2.618em;
 }
-/* line 184, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .post .tags {
   top: 7.618em;
 }
-/* line 186, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .post .tags .tag {
   text-transform: uppercase;
   font-size: 0.8em;
