@@ -4,12 +4,14 @@ class Config(model.Model):
     value = model.StringProperty(indexed = False)
 
 class Post(model.Model):
-    _use_memcache = False
-    
     date = model.DateProperty()
     title = model.StringProperty(indexed = False)
     content = model.TextProperty(indexed = False)
     tags = model.StringProperty(repeated = True)
+
+    @classmethod
+    def all(cls):
+        return cls.query().fetch()
     
     @classmethod
     def create(cls, metadata, content):
