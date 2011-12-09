@@ -2,6 +2,9 @@
 @import "compass/css3";
 @import "pygments-themes/github";
 
+$c1: #900;
+$c2: #038;
+
 body{
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
@@ -30,6 +33,7 @@ a {
 header{  
   position: relative;
   h1, h2, h3, h4, h5, h6 {
+    color: #666;  
     display: inline-block;    
     font-family: 'Play', sans-serif;
   }
@@ -40,6 +44,9 @@ header{
     position: absolute;
     top: 0;
     right: 1.618em;
+    a {
+      color: $c1;
+    }
   }
   p {
     margin-top: 0;

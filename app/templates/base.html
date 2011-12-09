@@ -8,24 +8,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script type="text/javascript">
-
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-940809-16']);
     _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
+    var WebFontConfig = {
+      google: { families: [ 'Ubuntu:400,700,400italic,700italic:latin','Ubuntu+Mono:400,700,400italic,700italic', 'Play:400,700'] }
+    };    
   </script>
 </head>
 <body>
   <div id="container">
     <header>
       <a href="/"><h1>Hangar</h1></a>
-      <a href="http://www.runway7.net"><h4 class="byline">by Runway 7</h4></a>
+      <h4 class="byline">the <a href="http://www.runway7.net">Runway 7</a> blog</h4>
     </header>
     <div id="main" role="main">
       {% block content %}{% endblock %}
@@ -36,17 +31,17 @@
     </footer>
   </div> 
   <script type="text/javascript">
-    WebFontConfig = {
-      google: { families: [ 'Ubuntu:400,700,400italic,700italic:latin','Ubuntu+Mono:400,700,400italic,700italic', 'Play:400,700'] }
-    };
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();    
     (function() {
       var wf = document.createElement('script');
-      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })(); </script>
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js';
+      wf.type = 'text/javascript'; wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
+    })(); 
+  </script>
 </body>
 </html>
