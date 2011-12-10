@@ -929,12 +929,12 @@ footer {
 /* line 89, ../sass/screen.scss */
 .post a, .intro a {
   text-decoration: none;
-  color: #333;
+  color: #003388;
   border-bottom: thin dashed #999;
 }
 /* line 93, ../sass/screen.scss */
 .post a:visited, .intro a:visited {
-  color: #333;
+  color: #003388;
 }
 
 /* line 99, ../sass/screen.scss */
