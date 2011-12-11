@@ -1,5 +1,7 @@
 from google.appengine.ext.ndb import model, key
 
+lower_validator = lambda prop, val: val.lower()
+
 class Config(model.Model):
     value = model.StringProperty(indexed = False)
 
@@ -7,7 +9,7 @@ class Post(model.Model):
     date = model.DateProperty()
     title = model.StringProperty(indexed = False)
     content = model.TextProperty(indexed = False)
-    tags = model.StringProperty(repeated = True)
+    tags = model.StringProperty(repeated = True, validator = lower_validator)
 
     @classmethod
     def all(cls):
