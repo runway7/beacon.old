@@ -60,6 +60,6 @@ def index(request):
 
 application = context.toplevel(webapp.WSGIApplication([
     webapp.SimpleRoute('/_refresh/', handler = refresh),
-    webapp.SimpleRoute('/', handler = index),
+    webapp.SimpleRoute('/', handler = index), 
     webapp.SimpleRoute('/.*', handler = serve_post)
 ], debug=True).__call__)
