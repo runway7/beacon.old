@@ -2,19 +2,25 @@
 @import "compass/css3";
 @import "pygments-themes/github";
 
-$c1: #900;
-$c2: #038;
+$light: #999;
+$medium: #666;
+$dark: #333;
+$background: rgba(255,255,255,0.381);
+
+@mixin inset-shadow($spread: 0.381em){
+  @include single-box-shadow(rgba(0,0,0,0.2), -1px, 1px, $spread, 0px, inset);
+}
 
 body{
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.618em;
-  color: #444;
-  background: url(/stylesheets/images/bright_squares.png) fixed;
+  color: $dark;
+  background: url(/stylesheets/images/concrete_wall_3.png) fixed;
 }
 
 h1, h2, h3, h4, h5, h6{
-  color: #333;
+  color: $dark;
 }
 
 a {
@@ -37,7 +43,7 @@ blockquote {
 header{  
   position: relative;
   h1, h2, h3, h4, h5, h6 {
-    color: #666;  
+    color: $medium;  
     display: inline-block;    
     font-family: 'Play', sans-serif;
   }
@@ -49,7 +55,7 @@ header{
     top: 0;
     right: 1.618em;
     a {
-      color: $c1;
+      color: $dark;
     }
   }
   p {
@@ -63,7 +69,7 @@ header{
 }
 
 pre, code {
-  background: rgba(230,230,230,0.381);
+  background: $background;
   padding: 0.15em 0.3em 0.15em 0.4em;
   @include border-radius(0.3em);
   font-family: 'Ubuntu Mono', monospace;
@@ -92,16 +98,19 @@ footer {
 .post, .intro {
   a {
     text-decoration: none;
-    color: $c2;
+    color: $dark;
     border-bottom: thin dashed #999;
     &:visited{
-      color: $c2;
+      color: $dark;
     }
   }
 }
 
 .post-list, .intro{
   margin-bottom: 1.618em;
+  @include inset-shadow();
+  background: $background;
+  @include border-radius(0.618em);  
 }
 
 .post-list{
@@ -110,14 +119,14 @@ footer {
     cursor: pointer;
     @include transition-property('background');
     @include transition-duration(0.3s);
-    background: rgba(255,255,255, 0.618);
+
     display: block;
     padding: 1.618em;
     line-height: 2em;
     position: relative;
     .title {
       margin: 0;
-      color: #900;
+      color: $dark;
     }
     .arrow {
       position: absolute;
@@ -138,16 +147,12 @@ footer {
       right: 1.618em;
       .tag {
         font-size: 0.8em;
-        color: #038;
+        color: $medium;
         margin-left: 0.381em;
       }
     }
     border-bottom: thin solid #ccc; 
-    &:first-child{
-      @include border-top-radius(0.618em);  
-    }
     &:last-child {
-      @include border-bottom-radius(0.618em);  
       border-bottom: none;
     }
     &:hover {
@@ -156,7 +161,6 @@ footer {
         @include rotate(0);
         @include opacity(1);
       }
-      background: rgba(255,255,255, 0.818);
     }
   }
 }
@@ -164,7 +168,7 @@ footer {
 .intro {
   @include border-radius(0.618em);  
   padding: 1.61em;
-  background: rgba(255,255,255, 0.618);
+  background: $background;
   text-align: center;
   padding: 0.61em 1.61em;
 }
@@ -172,26 +176,29 @@ footer {
 .post {
   h1,h2,h3,h4,h5,h6{
     line-height: 1.4em;
-    color: #900;
+    color: $dark;
   }  
   a {
-    color: #038;
+    color: $dark;
   }
   padding: 0.8em 2.61em;
-  background: rgba(255,255,255, 0.618);
+  background: $background;
+  @include inset-shadow(0.381em);
   @include border-radius(0.618em);  
   position: relative;
   .date, .tags {
+    @include inset-shadow(2px);
     position: absolute;
     padding: 0.618em;
     text-align: right;
-    color: #999;
-    background: rgba(255,255,255, 0.61);
-    @include border-right-radius(0.6em);
-    right: -7.618em;
+    color: $light;
+    background: $background;
+    @include border-radius(0.381em);
+    right: -8.318em;
     width: 7.618em;    
     @include box-sizing(border-box);
     -moz-box-sizing: border-box;
+    border: none;
   }
   .date {
     top: 2.618em;
