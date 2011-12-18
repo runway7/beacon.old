@@ -9,10 +9,11 @@ Beacon assumes the content repo contains a set of Markdown files, one post per f
 
     <!--
     ~~~
-    title: Rails Validations : A Technical Guide
+    title: "Rails Validations : A Technical Guide"
     publish: yes
     tags: ruby, rails, validation, technical-guide
     slug: /technical-guides/rails-vaildations
+    date: 2011-12-05
     ~~~
     -->
 
