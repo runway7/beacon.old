@@ -26,6 +26,8 @@ All text between the `~~~` characters is parsed as YAML. Beacon currently requir
 
 `slug`: The URL slug at which the post will be served. This also serves as a kind of ID for the post. 
 
+`date`: The date which the post should show as being published on, in the `yyyy-mm-dd` format.
+
 ---
 
 Beacon runs on **Google App Engine**, and should be able to power most, if not all, blogs well within the free quota. 
