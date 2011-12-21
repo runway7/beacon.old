@@ -1,24 +1,28 @@
 {% extends "base.html" %}
 {% block title %}Hangar: The Runway 7 Blog{% endblock %}
 {% block content %}
+{% if not without_intro %}
 <section class="intro">
-  <p>Hangar is a collection of insights, guides and how-to's for Python, <a href="http://code.google.com/appengine">Google App Engine</a>, <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> / JavaScript, SASS and high-performance web development.</p>
+  <p>Hangar is a collection of insights, guides and how-to's for Python, <a href="http://code.google.com/appengine">Google App Engine</a>, <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> / JavaScript, SASS and high-performance web development, all gained when working on <a href="http://www.runway7.net">Runway 7</a>.</p>
   <p>Almost all of the code referred to here is open sourced on <a href="https://github.com/runway7">github.com/runway7</a></p>
-</section>
+</section>  
+{% endif %}
 <section class='post-list'>
   {% for post in posts %}
-    <a class="post-li" href="{{post.key.id()}}">
-      <h3 class="title">{{ post.title }}</h3>
-      <div class='date'>{{post.date.strftime('%b %d, %Y')}}</div>
+    <section class="post-li">
+      <a href="{{post.key.id()}}">
+        <h3 class="title">{{ post.title }}</h3>
+        <div class='date'>{{post.date.strftime('%b %d, %Y')}}</div>
+      </a>
       {% if post.tags %}
         <div class="tags">
           {% for tag in post.tags %}
-            <span class="tag" href="#">{{ tag }}</span>
+            <a class="tag" href="{{ url_for('by-tag', tag = tag) }}">{{ tag }}</a>
           {% endfor %}
         </div>        
       {% endif %}
       <div class="arrow">&gt;</div>
-    </a>
+    </section>
   {% endfor %}  
 </section>
 {% endblock %}

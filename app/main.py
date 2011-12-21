@@ -29,7 +29,7 @@ jinja_environment = jinja2.Environment(
 def render(template_file, data = {}):
     template = jinja_environment.get_template(template_file)
     response = webapp.get_request().app.response_class()
-    response.out.write(template.render(data))
+    response.out.write(template.render(data, url_for = webapp.uri_for))
     return response
     
 zip_stream = lambda stream: zipfile.ZipFile(StringIO.StringIO(stream), 'r')
@@ -55,11 +55,15 @@ def serve_post(request):
     if not post: webapp.abort(404)
     return render('post.html', dict(post = post))
 
+def tagged(request, tag):
+    return render('index.html', dict(posts = Post.query(Post.tags == tag), without_intro = True))
+
 def index(request):
     return render('index.html', dict(posts = Post.all()))
 
 application = context.toplevel(webapp.WSGIApplication([
     webapp.SimpleRoute('/_refresh/', handler = refresh),
+    webapp.Route('/tags/<tag>', handler = tagged, name = 'by-tag'), 
     webapp.SimpleRoute('/', handler = index), 
     webapp.SimpleRoute('/.*', handler = serve_post)
 ], debug=True).__call__)

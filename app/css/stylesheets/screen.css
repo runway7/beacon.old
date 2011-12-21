@@ -832,68 +832,69 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
-/* line 29, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 a:visited, a:active, a:hover {
   color: inherit;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 blockquote {
   font-style: italic;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 #container {
   margin: auto;
   width: 36em;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 header {
   position: relative;
   padding: 0.8em 1.61em;
-  -webkit-border-radius-bottomleft: 0.5em;
-  -moz-border-bottom-left-radius: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
   -ms-border-bottom-left-radius: 0.5em;
   -o-border-bottom-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
-  -webkit-border-radius-bottomright: 0.5em;
-  -moz-border-bottom-right-radius: 0.5em;
+  -moz-border-radius-bottomright: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
   -ms-border-bottom-right-radius: 0.5em;
   -o-border-bottom-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
-/* line 45, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 header h1, header h2, header h3, header h4, header h5, header h6 {
   color: #666666;
   display: inline-block;
   font-family: 'Play', sans-serif;
 }
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 header h1 {
   text-transform: uppercase;
 }
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 header .byline {
   position: absolute;
   top: 0;
   right: 1.618em;
 }
-/* line 57, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 header .byline a {
   color: #333333;
 }
-/* line 61, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 header p {
   margin-top: 0;
 }
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 header a {
   border-bottom: none;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 pre, code {
   background: rgba(255, 255, 255, 0.381);
   padding: 0.15em 0.3em 0.15em 0.4em;
@@ -905,7 +906,7 @@ pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 pre {
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
@@ -916,7 +917,7 @@ pre {
   display: block;
   overflow-x: auto;
 }
-/* line 84, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 pre > code {
   line-height: 1.5em;
   background: none;
@@ -925,28 +926,29 @@ pre > code {
   white-space: pre;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 footer {
   text-align: center;
   margin: 2.618em;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .post a, .intro a {
   text-decoration: none;
   color: #333333;
   border-bottom: thin dashed #999;
 }
-/* line 103, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .post a:visited, .intro a:visited {
   color: #333333;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .post-list, .intro {
   margin-bottom: 1.618em;
   -webkit-box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
   box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.381);
   -webkit-border-radius: 0.618em;
@@ -956,18 +958,20 @@ footer {
   border-radius: 0.618em;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .post-list {
   padding: 0;
 }
-/* line 118, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .post-list .post-li {
   cursor: pointer;
   -webkit-transition-property: background;
   -moz-transition-property: background;
+  -o-transition-property: background;
   transition-property: background;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   display: block;
   padding: 1.618em;
@@ -975,12 +979,12 @@ footer {
   position: relative;
   border-bottom: thin solid #ccc;
 }
-/* line 127, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .post-list .post-li .title {
   margin: 0;
   color: #333333;
 }
-/* line 131, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .post-list .post-li .arrow {
   position: absolute;
   top: 0.081em;
@@ -989,52 +993,58 @@ footer {
   -webkit-transform: translateX(-1em);
   -moz-transform: translateX(-1em);
   -ms-transform: translateX(-1em);
+  -o-transform: translateX(-1em);
   transform: translateX(-1em);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   color: rgba(100, 100, 100, 0.3);
   -webkit-transition-property: all;
   -moz-transition-property: all;
+  -o-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 143, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .post-list .post-li .tags {
   text-transform: uppercase;
   position: absolute;
   bottom: 0.618em;
   right: 1.618em;
 }
-/* line 148, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .post-list .post-li .tags .tag {
   font-size: 0.8em;
   color: #666666;
   margin-left: 0.381em;
 }
-/* line 155, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .post-list .post-li:last-child {
   border-bottom: none;
 }
-/* line 159, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .post-list .post-li:hover .arrow {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
+  -o-transform: translateX(0);
   transform: translateX(0);
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
   -ms-transform: rotate(0);
+  -o-transform: rotate(0);
   transform: rotate(0);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .intro {
   -webkit-border-radius: 0.618em;
   -moz-border-radius: 0.618em;
@@ -1047,12 +1057,13 @@ footer {
   padding: 0.61em 1.61em;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .post {
   padding: 0.8em 2.61em;
   background: rgba(255, 255, 255, 0.381);
   -webkit-box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
   box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 0.618em;
   -moz-border-radius: 0.618em;
@@ -1061,19 +1072,20 @@ footer {
   border-radius: 0.618em;
   position: relative;
 }
-/* line 177, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   line-height: 1.4em;
   color: #333333;
 }
-/* line 181, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .post a {
   color: #333333;
 }
-/* line 189, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .post .date, .post .tags {
   -webkit-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   position: absolute;
   padding: 0.618em;
@@ -1088,20 +1100,21 @@ footer {
   right: -8.318em;
   width: 7.618em;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   border: none;
 }
-/* line 203, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .post .date {
   top: 2.618em;
 }
-/* line 206, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 .post .tags {
   top: 6.618em;
 }
-/* line 208, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .post .tags .tag {
   text-transform: uppercase;
   font-size: 0.8em;
