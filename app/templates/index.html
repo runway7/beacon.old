@@ -10,7 +10,7 @@
 <section class='post-list'>
   {% for post in posts %}
     <section class="post-li">
-      <a href="{{post.key.id()}}">
+      <a class="post-link" href="{{post.key.id()}}">
         <h3 class="title">{{ post.title }}</h3>
         <div class='date'>{{post.date.strftime('%b %d, %Y')}}</div>
       </a>

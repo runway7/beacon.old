@@ -974,17 +974,22 @@ footer {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   display: block;
-  padding: 1.618em;
+  padding: 0;
   line-height: 2em;
   position: relative;
   border-bottom: thin solid #ccc;
 }
 /* line 128, ../sass/screen.scss */
-.post-list .post-li .title {
-  margin: 0;
-  color: #333333;
+.post-list .post-li .post-link {
+  padding: 1.618em;
+  display: block;
 }
 /* line 132, ../sass/screen.scss */
+.post-list .post-li .title {
+  margin: 0 0 0.618em 0;
+  color: #333333;
+}
+/* line 136, ../sass/screen.scss */
 .post-list .post-li .arrow {
   position: absolute;
   top: 0.081em;
@@ -1011,24 +1016,24 @@ footer {
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 144, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .post-list .post-li .tags {
   text-transform: uppercase;
   position: absolute;
   bottom: 0.618em;
   right: 1.618em;
 }
-/* line 149, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .post-list .post-li .tags .tag {
   font-size: 0.8em;
   color: #666666;
   margin-left: 0.381em;
 }
-/* line 156, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .post-list .post-li:last-child {
   border-bottom: none;
 }
-/* line 160, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .post-list .post-li:hover .arrow {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -1044,7 +1049,7 @@ footer {
   opacity: 1;
 }
 
-/* line 169, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .intro {
   -webkit-border-radius: 0.618em;
   -moz-border-radius: 0.618em;
@@ -1057,7 +1062,7 @@ footer {
   padding: 0.61em 1.61em;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .post {
   padding: 0.8em 2.61em;
   background: rgba(255, 255, 255, 0.381);
@@ -1072,16 +1077,16 @@ footer {
   border-radius: 0.618em;
   position: relative;
 }
-/* line 178, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   line-height: 1.4em;
   color: #333333;
 }
-/* line 182, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .post a {
   color: #333333;
 }
-/* line 190, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .post .date, .post .tags {
   -webkit-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
@@ -1106,15 +1111,15 @@ footer {
   -moz-box-sizing: border-box;
   border: none;
 }
-/* line 204, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .post .date {
   top: 2.618em;
 }
-/* line 207, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 .post .tags {
   top: 6.618em;
 }
-/* line 209, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .post .tags .tag {
   text-transform: uppercase;
   font-size: 0.8em;

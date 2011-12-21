@@ -122,11 +122,15 @@ footer {
     @include transition-duration(0.3s);
 
     display: block;
-    padding: 1.618em;
+    padding: 0;
     line-height: 2em;
     position: relative;
+    .post-link {
+      padding: 1.618em;
+      display: block;
+    }
     .title {
-      margin: 0;
+      margin: 0 0 0.618em 0;
       color: $dark;
     }
     .arrow {
