@@ -56,10 +56,10 @@ def serve_post(request):
     return render('post.html', dict(post = post))
 
 def tagged(request, tag):
-    return render('index.html', dict(posts = Post.query(Post.tags == tag), without_intro = True))
+    return render('index.html', dict(posts = Post.query(Post.tags == tag).order(-Post.date), without_intro = True))
 
 def index(request):
-    return render('index.html', dict(posts = Post.all()))
+    return render('index.html', dict(posts = Post.query().order(-Post.date)))
 
 application = context.toplevel(webapp.WSGIApplication([
     webapp.SimpleRoute('/_refresh/', handler = refresh),
