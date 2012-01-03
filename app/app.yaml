@@ -9,6 +9,10 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /robots\.txt
+  static_files: robots.txt
+  upload: robots\.txt
+
 - url: /stylesheets
   static_dir: css/stylesheets/
   
@@ -25,3 +29,6 @@ libraries:
 
 builtins:
 - appstats: on
+
+inbound_services:
+- warmup
