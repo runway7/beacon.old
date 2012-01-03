@@ -94,6 +94,9 @@ pre {
 footer {
   text-align: center;
   margin: 2.618em;
+  a:hover{
+    text-decoration: underline;
+  }
 }
 
 .post, .intro {
@@ -191,7 +194,7 @@ footer {
   @include inset-shadow(0.381em);
   @include border-radius(0.618em);  
   position: relative;
-  .date, .tags {
+  .date, .tags, .engage {
     @include inset-shadow(2px);
     position: absolute;
     padding: 0.618em;
@@ -199,17 +202,29 @@ footer {
     color: $light;
     background: $background;
     @include border-radius(0.381em);
-    right: -8.318em;
-    width: 7.618em;    
+    right: -10.318em;
+    width: 9.618em;    
     @include box-sizing(border-box);
     -moz-box-sizing: border-box;
     border: none;
+    a:hover{
+      text-decoration: underline;
+    }
   }
   .date {
     top: 2.618em;
   }
-  .tags{
+  .engage {
     top: 6.618em;
+    a {
+      text-transform: uppercase;
+      font-size: 0.8em;
+      display: block;
+      border-bottom: none;
+    }
+  }
+  .tags{
+    top: 14.618em;
     .tag{
       text-transform: uppercase;
       font-size: 0.8em;

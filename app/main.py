@@ -25,6 +25,9 @@ zip_path = 'https://github.com/%s/zipball/master' % repo
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(current_dir, 'templates')))
+jinja_environment.globals.update(dict(
+    app_version = os.environ['CURRENT_VERSION_ID']
+))
 
 def render(template_file, data = {}):
     template = jinja_environment.get_template(template_file)
@@ -58,12 +61,19 @@ def serve_post(request):
 def tagged(request, tag):
     return render('index.html', dict(posts = Post.query(Post.tags == tag).order(-Post.date), without_intro = True))
 
+def feed(request):
+    response = render('feed.xml', dict(posts = Post.query().order(-Post.date)))
+    response.headers['Content-Type'] = 'application/rss+xml'
+    return response
+
 def index(request):
     return render('index.html', dict(posts = Post.query().order(-Post.date)))
 
 application = context.toplevel(webapp.WSGIApplication([
     webapp.SimpleRoute('/_refresh/', handler = refresh),
     webapp.Route('/tags/<tag>', handler = tagged, name = 'by-tag'), 
+    webapp.SimpleRoute('/_ah/warmup', handler = index), 
+    webapp.SimpleRoute('/feed', handler = feed), 
     webapp.SimpleRoute('/', handler = index), 
     webapp.SimpleRoute('/.*', handler = serve_post)
 ], debug=True).__call__)

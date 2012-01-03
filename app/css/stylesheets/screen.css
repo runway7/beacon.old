@@ -931,19 +931,23 @@ footer {
   text-align: center;
   margin: 2.618em;
 }
+/* line 97, ../sass/screen.scss */
+footer a:hover {
+  text-decoration: underline;
+}
 
-/* line 100, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .post a, .intro a {
   text-decoration: none;
   color: #333333;
   border-bottom: thin dashed #999;
 }
-/* line 104, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .post a:visited, .intro a:visited {
   color: #333333;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .post-list, .intro {
   margin-bottom: 1.618em;
   -webkit-box-shadow: inset -1px 1px 0.381em 0px rgba(0, 0, 0, 0.2);
@@ -958,11 +962,11 @@ footer {
   border-radius: 0.618em;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .post-list {
   padding: 0;
 }
-/* line 119, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .post-list .post-li {
   cursor: pointer;
   -webkit-transition-property: background;
@@ -979,17 +983,17 @@ footer {
   position: relative;
   border-bottom: thin solid #ccc;
 }
-/* line 128, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .post-list .post-li .post-link {
   padding: 1.618em;
   display: block;
 }
-/* line 132, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .post-list .post-li .title {
   margin: 0 0 0.618em 0;
   color: #333333;
 }
-/* line 136, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .post-list .post-li .arrow {
   position: absolute;
   top: 0.081em;
@@ -1016,24 +1020,24 @@ footer {
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 148, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .post-list .post-li .tags {
   text-transform: uppercase;
   position: absolute;
   bottom: 0.618em;
   right: 1.618em;
 }
-/* line 153, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .post-list .post-li .tags .tag {
   font-size: 0.8em;
   color: #666666;
   margin-left: 0.381em;
 }
-/* line 160, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .post-list .post-li:last-child {
   border-bottom: none;
 }
-/* line 164, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .post-list .post-li:hover .arrow {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -1049,7 +1053,7 @@ footer {
   opacity: 1;
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .intro {
   -webkit-border-radius: 0.618em;
   -moz-border-radius: 0.618em;
@@ -1062,7 +1066,7 @@ footer {
   padding: 0.61em 1.61em;
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .post {
   padding: 0.8em 2.61em;
   background: rgba(255, 255, 255, 0.381);
@@ -1077,17 +1081,17 @@ footer {
   border-radius: 0.618em;
   position: relative;
 }
-/* line 182, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   line-height: 1.4em;
   color: #333333;
 }
-/* line 186, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .post a {
   color: #333333;
 }
-/* line 194, ../sass/screen.scss */
-.post .date, .post .tags {
+/* line 197, ../sass/screen.scss */
+.post .date, .post .tags, .post .engage {
   -webkit-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   -o-box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
@@ -1102,8 +1106,8 @@ footer {
   -ms-border-radius: 0.381em;
   -o-border-radius: 0.381em;
   border-radius: 0.381em;
-  right: -8.318em;
-  width: 7.618em;
+  right: -10.318em;
+  width: 9.618em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -1111,15 +1115,30 @@ footer {
   -moz-box-sizing: border-box;
   border: none;
 }
-/* line 208, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
+.post .date a:hover, .post .tags a:hover, .post .engage a:hover {
+  text-decoration: underline;
+}
+/* line 214, ../sass/screen.scss */
 .post .date {
   top: 2.618em;
 }
-/* line 211, ../sass/screen.scss */
-.post .tags {
+/* line 217, ../sass/screen.scss */
+.post .engage {
   top: 6.618em;
 }
-/* line 213, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
+.post .engage a {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  display: block;
+  border-bottom: none;
+}
+/* line 226, ../sass/screen.scss */
+.post .tags {
+  top: 14.618em;
+}
+/* line 228, ../sass/screen.scss */
 .post .tags .tag {
   text-transform: uppercase;
   font-size: 0.8em;

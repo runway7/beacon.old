@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+	<title>Hangar, by Runway 7</title>
+	<link>http://hangar.runway7.net/</link>
+	<description>The Hangar is a collection of insights, guides and how-to's for Python, Google App Engine, CoffeeScript / JavaScript, SASS and high-performance web development, all gained when working on Runway 7.</description>
+	{% for post in posts %}
+	<item>
+		<title>{{ post.title }}</title>
+		<link>http://hangar.runway7.net{{post.key.id()}}</link>
+		<guid>http://hangar.runway7.net{{post.key.id()}}</guid>		
+		<author>sudhir.j@runway7.net (Sudhir Jonathan)</author>
+		<pubDate>{{post.date.strftime('%a, %d %b %Y 00:00:00 GMT')}}</pubDate>				
+	</item>	
+	{% endfor %}	
+</channel>
+</rss>
