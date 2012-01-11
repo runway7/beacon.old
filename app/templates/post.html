@@ -1,16 +1,15 @@
 {% extends "base.html" %}
-{% block title %}
-{{ post.title }}
+{% block title %}{{ post.title }}{% endblock %}
+{% block meta %}
+    <meta itemprop="name" content="{{ post.title }}">
+    <meta property="og:title" content="{{ post.title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://hangar.runway7.net{{post.key.id()}}" />
 {% endblock %}
 {% block content %}
 <section class="post">{{ post.content }}</section>
 <section id="sidebar">
-  <div class="date">{{post.date.strftime('%b %d, %Y')}}</div>
-  <div class="engage">
-    <a href="http://feeds.feedburner.com/hangar-runway7">RSS</a>
-    <a href="mailto:sudhir.j@runway7.net">email</a>
-    <a href="https://twitter.com/#!/runway_7">Twitter</a>    
-  </div>
+  <div class="date">{{post.date.strftime('%b %d, %Y')}}</div>  
   {% if post.tags %}
   <div class="tags">
     <a class="tag" href="/">All posts</a>
@@ -20,9 +19,9 @@
   </div>
   {% endif %}
   <div class="share">    
-    <div class="share-button"><g:plusone size="medium"></g:plusone></div>
-    <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="runway_7">Tweet</a></div>
-    <div class="share-button"><div class="fb-like" data-send="true" data-layout="button_count" data-width="130" data-show-faces="false"></div></div>
+    <div class="share-button"><div class="g-plusone" data-size="medium" data-href="http://hangar.runway7.net{{post.key.id()}}"></div></div>
+    <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="runway_7" data-url="http://hangar.runway7.net{{post.key.id()}}">Tweet</a></div>
+    <div class="share-button"><div class="fb-like" data-send="true" data-layout="button_count" data-width="130" data-href="http://hangar.runway7.net{{post.key.id()}}" data-show-faces="false"></div></div>
     <div class="share-button"><a href="https://twitter.com/runway_7" class="twitter-follow-button" data-show-count="false">Follow @runway_7</a></div>    
     <div class="share-button feed"><a href="http://feeds.feedburner.com/hangar-runway7" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png"/>Subscribe</a></div>
   </div>
