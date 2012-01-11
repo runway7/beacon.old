@@ -1,49 +1,84 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% block title %}{% endblock %} : Hangar, Runway 7</title>
-  <meta name="author" content="Sudhir Jonathan">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="alternate" type="application/rss+xml" title="Hangar, by Runway 7" href="http://feeds.feedburner.com/hangar-runway7" />
-  <link href="/stylesheets/screen.css?v={{app_version}}" media="screen, projection" rel="stylesheet" type="text/css" />
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-940809-17']);
-    _gaq.push(['_setDomainName', 'runway7.net']);
-    _gaq.push(['_trackPageview']);
-    var WebFontConfig = {
-      google: { families: [ 'Ubuntu:400,700,400italic,700italic:latin','Ubuntu+Mono:400,700,400italic,700italic', 'Play:400,700'] }
-    };    
-  </script>
-</head>
-<body>
-  <div id="container">
-    <header>
-      <a href="/"><h1>Hangar</h1></a>
-      <h4 class="byline">the <a href="http://www.runway7.net">Runway 7</a> blog</h4>
-    </header>
-    <div id="main" role="main">
-      {% block content %}{% endblock %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="author" content="Sudhir Jonathan">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="Hangar, by Runway 7" href="http://feeds.feedburner.com/hangar-runway7" />
+    <link href="/stylesheets/screen.css?v={{app_version}}" media="screen, projection" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-940809-17']);
+      _gaq.push(['_setDomainName', 'runway7.net']);
+      _gaq.push(['_trackPageview']);
+      var WebFontConfig = {
+        google: { families: [ 'Ubuntu:400,700,400italic,700italic:latin','Ubuntu+Mono:400,700,400italic,700italic', 'Play:400,700'] }
+      };    
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <a href="/">
+          <h1>Hangar</h1>
+        </a>
+        <h4 class="byline">
+          the
+          <a href="http://www.runway7.net">Runway 7</a>
+          blog
+        </h4>
+      </header>
+      <div id="main" role="main">{% block content %}{% endblock %}</div>
+      <footer>
+        <a href="https://twitter.com/#!/runway_7">@runway_7</a>
+        |
+        <a href="mailto:sudhir.j@runway7.net">sudhir.j@runway7.net</a>
+        |
+        <a href="http://feeds.feedburner.com/hangar-runway7">RSS</a>
+        <br/>
+        <br/>
+        &copy;
+        <a href="http://www.sudhirjonathan.com">Sudhir Jonathan</a>
+        <br/>
+        <br/>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+          <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+        </a>
+      </footer>
     </div>
-    <footer>
-      <a href="https://twitter.com/#!/runway_7">@runway_7</a> | <a href="mailto:sudhir.j@runway7.net">sudhir.j@runway7.net</a> | <a href="http://feeds.feedburner.com/hangar-runway7">RSS</a><br/><br/>&copy; <a href="http://www.sudhirjonathan.com">Sudhir Jonathan</a><br/><br/>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
-    </footer>
-  </div> 
-  <script type="text/javascript">
+    <script type="text/javascript">
+    // Google Analytics Loader
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();    
+    // Webfont loader
     (function() {
       var wf = document.createElement('script');
       wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js';
       wf.type = 'text/javascript'; wf.async = 'true';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wf, s);
+    })();
+    // Twitter Loader
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    // Google +1 loader
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
     })(); 
+    // Facebook loader
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=144980402233879";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   </script>
-</body>
+  <div id="fb-root"></div>
+  </body>
 </html>

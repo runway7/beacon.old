@@ -11,6 +11,22 @@ $background: rgba(255,255,255,0.381);
   @include single-box-shadow(rgba(0,0,0,0.2), -1px, 1px, $spread, 0px, inset);
 }
 
+@mixin sidebar-block(){
+  @include inset-shadow(2px);    
+  padding: 0.618em;
+  margin: 1.618em 0;
+  text-align: left;
+  color: $medium;
+  background: $background;
+  @include border-radius(0.381em);    
+  @include box-sizing(border-box);
+  -moz-box-sizing: border-box;
+  border: none;
+  a:hover{
+    text-decoration: underline;
+  }
+}  
+
 body{
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
@@ -39,6 +55,10 @@ blockquote {
 #container{
   margin: auto;
   width: 36em;
+}
+
+#main {
+  position: relative;
 }
 
 header{  
@@ -193,29 +213,20 @@ footer {
   background: $background;
   @include inset-shadow(0.381em);
   @include border-radius(0.618em);  
-  position: relative;
-  .date, .tags, .engage {
-    @include inset-shadow(2px);
-    position: absolute;
-    padding: 0.618em;
-    text-align: right;
-    color: $light;
-    background: $background;
-    @include border-radius(0.381em);
-    right: -10.318em;
-    width: 9.618em;    
-    @include box-sizing(border-box);
-    -moz-box-sizing: border-box;
-    border: none;
-    a:hover{
-      text-decoration: underline;
-    }
-  }
+  position: relative;  
+}
+
+#sidebar {
+  position: absolute;
+  right: -10.318em;
+  width: 9.618em;    
+  top: 0.618em;   
   .date {
-    top: 2.618em;
+    @include sidebar-block();   
+    color: $light;
   }
-  .engage {
-    top: 6.618em;
+  .engage {   
+    @include sidebar-block();
     a {
       text-transform: uppercase;
       font-size: 0.8em;
@@ -223,8 +234,28 @@ footer {
       border-bottom: none;
     }
   }
+  .share {
+    @include sidebar-block();
+    @include opacity(0.618);
+    @include transition-duration(0.3s);
+    @include transition-property(opacity);
+    &:hover{
+      @include opacity(1);
+    }
+    .share-button{
+      padding: 0.281em 0;
+      &.feed {            
+        text-transform: uppercase;
+        font-size: 0.8em;      
+        img {
+          vertical-align: middle;
+          padding-right: 0.381em;
+        }
+      }
+    }
+  }
   .tags{
-    top: 14.618em;
+    @include sidebar-block();
     .tag{
       text-transform: uppercase;
       font-size: 0.8em;
