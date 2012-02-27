@@ -12,7 +12,7 @@ sys.path[0:0] = [
 
 from google.appengine.ext import webapp
 from google.appengine.api import urlfetch
-from google.appengine.ext.ndb import context
+from google.appengine.ext import ndb
 
 import logging, StringIO, functools, os
 import zipfile, md_parser, jinja2
@@ -69,7 +69,7 @@ def feed(request):
 def index(request):
     return render('index.html', dict(posts = Post.query().order(-Post.date)))
 
-application = context.toplevel(webapp.WSGIApplication([
+application = ndb.toplevel(webapp.WSGIApplication([
     webapp.SimpleRoute('/_refresh/', handler = refresh),
     webapp.Route('/tags/<tag>', handler = tagged, name = 'by-tag'), 
     webapp.SimpleRoute('/_ah/warmup', handler = index), 
